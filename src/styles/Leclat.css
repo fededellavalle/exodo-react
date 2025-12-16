@@ -1,0 +1,131 @@
+/* =============================
+   SECCIÓN L’ÉCLAT
+============================= */
+.historia-leclat {
+  background-color: #0d0d0d;
+  padding: 80px 20px;
+  color: #e0ce99;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Título */
+.historia-titulo {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+  color: #e0ce99;
+  text-shadow: 0 0 12px rgba(224, 206, 153, 0.25);
+  font-weight: 600;
+}
+
+/* =============================
+     CAROUSEL
+  ============================= */
+.carousel-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.carousel-window {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* ITEM */
+.historia-item {
+  flex: 0 0 50%; /* 👉 2 visibles */
+  padding: 0 12px;
+}
+
+.historia-item-inner {
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  padding: 20px;
+  height: 100%;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.historia-item-inner:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 45px rgba(224, 206, 153, 0.15);
+}
+
+.historia-item img {
+  width: 100%;
+  max-height: 330px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+
+.historia-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #e0ce99;
+}
+
+/* =============================
+     DOTS
+  ============================= */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(224, 206, 153, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+  background: #e0ce99;
+  box-shadow: 0 0 10px rgba(224, 206, 153, 0.7);
+  transform: scale(1.2);
+}
+
+/* =============================
+     RESERVA
+  ============================= */
+.historia-reserva {
+  margin-top: 60px;
+}
+
+.historia-reserva p {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.btn-reserva {
+  padding: 14px 28px;
+  background-color: #e0ce99;
+  color: #0d0d0d;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-reserva:hover {
+  background-color: #d5be87;
+  color: #000;
+}
+
+/* =============================
+     MOBILE
+  ============================= */
+@media (max-width: 768px) {
+  .historia-item {
+    flex: 0 0 100%; /* 👉 1 visible en mobile */
+  }
+}

@@ -1,0 +1,32 @@
+.event-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(255, 77, 0, 0.9);
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  box-shadow: 0 0 15px rgba(255, 77, 0, 0.6);
+}
+
+.event-placeholder {
+  opacity: 0.85;
+}
+
+.event-placeholder:hover {
+  transform: none;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.event-actions.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.icon-btn.disabled {
+  background: rgba(255, 255, 255, 0.05);
+}

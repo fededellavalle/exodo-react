@@ -1,0 +1,112 @@
+.parallax-transporte {
+  position: relative;
+  background-image: url("/images/fondo-transporte.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.transporte-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  width: 100%;
+  height: 100%;
+}
+
+.transporte-section {
+  position: relative;
+  z-index: 2;
+}
+
+#transporte {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 22px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+.transporte-title {
+  font-weight: 700;
+  color: #ff4d00;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.transporte-text {
+  opacity: 0.9;
+}
+
+/* Imagen */
+.transporte-img {
+  max-width: 90%;
+  filter: drop-shadow(0 0 20px rgba(255, 77, 0, 0.3));
+}
+
+/* Localidades */
+.localidades-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 0;
+}
+
+.localidades-list li {
+  list-style: none;
+  background: linear-gradient(135deg, #ff4d00, #ff6a00);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+  box-shadow: 0 0 8px rgba(255, 77, 0, 0.4);
+}
+
+.localidades-list li.visible {
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: 0 0 18px rgba(255, 77, 0, 0.7);
+}
+
+/* Botón WhatsApp */
+.btn-consulta-transporte {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #ff4d00, #ff6a00);
+  border: none;
+  padding: 14px 30px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  border-radius: 50px;
+  box-shadow: 0 0 18px rgba(255, 77, 0, 0.6);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+}
+
+.btn-consulta-transporte:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 30px rgba(255, 77, 0, 0.9);
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  #transporte {
+    border-radius: 0;
+  }
+
+  .localidades-list li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .parallax-transporte {
+    background-attachment: scroll !important;
+  }
+}

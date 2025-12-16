@@ -1,0 +1,80 @@
+.footer {
+  background: linear-gradient(135deg, #111, #1a1a1a);
+  color: #ffffff;
+  padding-top: 20px;
+}
+
+.footer-logo p {
+  font-size: 15px;
+  color: #bbbbbb;
+}
+
+.footer-contact p {
+  margin: 0;
+  font-size: 15px;
+  color: #dddddd;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 22px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff4d00;
+  transform: scale(1.2);
+}
+
+/* Línea y firma */
+.div-copy {
+  background-color: #111111;
+  padding: 10px 0;
+}
+
+.link-footer {
+  color: #ff4d00;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+  margin-left: 5px;
+}
+
+.link-footer:hover {
+  color: #ff7a33;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-contact {
+    margin-top: 20px;
+  }
+
+  .social-icons {
+    justify-content: center !important;
+  }
+}
+
+.footer-map-link {
+  color: #dddddd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-map-link:hover {
+  color: #ff4d00;
+  text-decoration: underline;
+}
+
+.click-hint {
+  font-size: 12px;
+  color: #777;
+  margin-left: 6px;
+  user-select: none;
+}

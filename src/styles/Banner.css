@@ -1,0 +1,105 @@
+/* ===== Banner ===== */
+.banner {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: url("/images/banner.webp") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Overlay con degradado (queda más premium) */
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.85),
+    rgba(10, 10, 10, 0.65)
+  );
+  z-index: 1;
+}
+
+/* Contenido */
+.banner-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 20px;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+/* Logo */
+.banner-logo {
+  max-width: 550px;
+  width: 100%;
+  margin-bottom: 30px;
+  animation: logoFloat 4s ease-in-out infinite;
+}
+
+/* Texto */
+.banner-title {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeUp 1.4s ease forwards;
+  color: #fff;
+}
+
+/* Redes */
+.banner-socials {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  opacity: 0;
+  animation: fadeUp 1.6s ease forwards;
+}
+
+.banner-socials a {
+  color: #fff;
+  font-size: 30px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.banner-socials a:hover {
+  transform: translateY(-5px) scale(1.1);
+  color: #ff2e63; /* podés cambiar por color marca */
+}
+
+/* ===== Animaciones ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes logoFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .banner-logo {
+    max-width: 340px;
+  }
+
+  .banner-socials {
+    gap: 18px;
+  }
+}

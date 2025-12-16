@@ -1,0 +1,67 @@
+/* Modal oscuro y elegante */
+.custom-modal-content {
+  background-color: #0f0f0f !important;
+  color: #e0ce99;
+  border: 2px solid #e0ce99;
+  border-radius: 14px;
+  padding: 25px;
+}
+
+.custom-modal-content .modal-header {
+  border-bottom: 1px solid rgba(224, 206, 153, 0.2);
+}
+
+.custom-modal-content .modal-title {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #e0ce99;
+}
+
+.custom-modal-content .modal-text {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.wpp-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.btn-wpp {
+  background-color: #e0ce99;
+  color: #0f0f0f;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.btn-wpp:hover {
+  background-color: #cdb875;
+  color: #000;
+}
+
+.separador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.linea {
+  flex: 1;
+  height: 1px;
+  background-color: #fff;
+  max-width: 100%;
+}
+
+.icono-separador {
+  height: 30px;
+  margin: 0 15px;
+}

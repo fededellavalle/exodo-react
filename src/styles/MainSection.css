@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&display=swap");
+
+.main {
+  background: rgb(14, 13, 13);
+  padding: 100px 8%;
+  color: #fff;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.main-video {
+  text-align: center;
+}
+
+/* Video */
+.main-video video {
+  width: 50%;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.main-content h2 {
+  font-family: "Anton", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.main-description,
+.pillars p {
+  font-family: "Inter", sans-serif;
+}
+
+.main-description {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+/* Pilares */
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.pillars div {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+  border-radius: 18px;
+  padding: 22px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.pillars p {
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.pillars div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.65), 0 0 50px rgba(255, 77, 0, 0.45);
+}
+
+.pillars span {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Hashtag */
+.hashtag {
+  font-family: "Anton", sans-serif;
+  letter-spacing: 4px;
+  opacity: 0.8;
+  margin-top: 30px;
+  color: #ff4d00;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .main {
+    padding: 70px 6%;
+  }
+
+  .main-description {
+    text-align: justify;
+  }
+
+  .main-content h2,
+  .hashtag {
+    text-align: center;
+  }
+}

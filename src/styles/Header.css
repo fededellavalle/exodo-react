@@ -1,0 +1,145 @@
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: black;
+  color: #fff;
+}
+
+header img {
+  height: 50px;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px; /* espacio interno a izquierda y derecha */
+}
+
+/* 🟧 Menú lateral desde la derecha */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -300px; /* cambia de left a right */
+  width: 250px;
+  height: 100%;
+  background-color: #111;
+  color: #fff;
+  z-index: 2000; /* por delante de todo */
+  padding: 5rem 1.5rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transition: right 0.3s ease-in-out; /* ← cambia de left */
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5); /* sombra a la izquierda */
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+/* 🟧 Nuevo botón de hamburguesa */
+.menu-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 3000;
+  position: relative;
+}
+
+.menu-icon i {
+  font-size: 28px;
+  color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.menu-icon:hover i {
+  transform: scale(1.2);
+}
+
+/* 🟧 Botón cerrar */
+.close-menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem; /* porque ahora el menú está a la derecha */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Overlay oscuro */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1500; /* detrás del side-menu, delante de todo lo demás */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.side-menu .item {
+  display: block;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.25s ease;
+  position: relative;
+  letter-spacing: 0.3px;
+}
+
+.side-menu .item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+  transition: width 0.25s ease;
+}
+
+.side-menu .item:hover {
+  color: #ff4d00;
+}
+
+.side-menu .item:hover::after {
+  width: 100%;
+}
+
+.leclat-menu-item {
+  font-family: "Courier New", Courier, monospace;
+  padding: 5px 0;
+  color: #e0ce99;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(224, 206, 153, 0.3);
+  cursor: default;
+  text-decoration: none;
+}
